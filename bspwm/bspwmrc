@@ -1,5 +1,7 @@
 #! /bin/sh
 
+
+picom --config ~/.config/picom.conf
 pgrep -x sxhkd > /dev/null || sxhkd &
 bash ~/.config/polybar/launch.sh &
 feh --bg-fill --randomize ~/wallpapers/*
