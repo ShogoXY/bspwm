@@ -10,7 +10,7 @@ echo "+++++++++++++++++++++++++++++++++++++++++"
 
 sleep 3
 sudo apt-get update -y
-sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox -y
+sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox
 
 sudo systemctl set-default graphical.target
 sudo systemctl enable sddm
