@@ -35,7 +35,7 @@ wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/leaf.jpg
 wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/motyl.jpg
 wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/mountain.png
 cd
-
+chmod +x ~/.config/bspwm/bspwmrc
 
 
 echo "Do you want to Reboot the system [y/N] "
