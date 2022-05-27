@@ -5,6 +5,10 @@ picom --config ~/.config/picom.conf
 pgrep -x sxhkd > /dev/null || sxhkd &
 bash ~/.config/polybar/launch.sh &
 feh --bg-fill --randomize ~/wallpapers/*
+#for random change after 1h
+while true ; do feh --bg-fill --randomize ~/wallpapers/* ; sleep 3600 ; done
+
+
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
