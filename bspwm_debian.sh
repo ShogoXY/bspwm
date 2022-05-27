@@ -1,13 +1,13 @@
 #!/bin/bash
 clear
-printf"
-+++++++++++++++++++++++++++++++++++++++++
-+                                       +
-+     Instalation and simple config     +
-+     BSPWM and SDDM window manager     +
-+                                       +
-+++++++++++++++++++++++++++++++++++++++++
-"
+echo""
+echo "+++++++++++++++++++++++++++++++++++++++++"
+echo "+                                       +"
+echo "+     Instalation and simple config     +"
+echo "+     BSPWM and SDDM window manager     +"
+echo "+                                       +"
+echo "+++++++++++++++++++++++++++++++++++++++++"
+
 sleep 5
 sudo apt-get install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox -y
 
