@@ -8,7 +8,7 @@ printf"
 +                                       +
 +++++++++++++++++++++++++++++++++++++++++
 "
-
+sleep 5
 sudo apt-get install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox -y
 
 sudo systemctl set-default graphical.target
