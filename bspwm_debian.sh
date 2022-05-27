@@ -8,8 +8,9 @@ echo "+     BSPWM and SDDM window manager     +"
 echo "+                                       +"
 echo "+++++++++++++++++++++++++++++++++++++++++"
 
-sleep 5
-sudo apt-get install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox -y
+sleep 3
+sudo apt-get update -y
+sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox -y
 
 sudo systemctl set-default graphical.target
 sudo systemctl enable sddm
