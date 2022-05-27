@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo""
+echo ""
 echo "+++++++++++++++++++++++++++++++++++++++++"
 echo "+                                       +"
 echo "+     Instalation and simple config     +"
