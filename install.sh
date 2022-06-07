@@ -7,6 +7,9 @@ echo "+     Instalation and simple config     +"
 echo "+     BSPWM and SDDM window manager     +"
 echo "+                                       +"
 echo "+++++++++++++++++++++++++++++++++++++++++"
+echo ""
+echo ""
+
 sudo echo ""
 echo "Installation will start in 5 sec"
 
@@ -66,7 +69,7 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
-mkdri -p ~/.config/kitty
+mkdir -p ~/.config/kitty
 
 
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/sxhkd/sxhkdrc 
