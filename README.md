@@ -1,6 +1,6 @@
 # bspwm
 
 ```
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/bspwm_debian.sh
+wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/install.sh
 bash install.sh
 ```
