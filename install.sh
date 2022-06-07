@@ -7,7 +7,7 @@ echo "+     Instalation and simple config     +"
 echo "+     BSPWM and SDDM window manager     +"
 echo "+                                       +"
 echo "+++++++++++++++++++++++++++++++++++++++++"
-
+sudo echo ""
 echo "Installation will start in 5 sec"
 
 for i in {5..1};
@@ -28,9 +28,9 @@ if [[ $SYS =~ "Debian" ]]; then
 
     if [[ "$de" != "" ]]
         then
-	        sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi
+	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi
         else
-	        sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
@@ -39,16 +39,18 @@ if [[ $SYS =~ "Debian" ]]; then
 
 elif [[ $SYS =~ "Fedora" ]]; then
     sudo dnf update -y
+    sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     
     if [[ "$de" != "" ]]
         then
-	        sudo dnf -y install vim git feh bspwm sxhkd polybar kitty rofi
+	    sudo dnf -y install vim git feh bspwm sxhkd polybar kitty rofi
         else
-	        sudo dnf -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
     fi
+ fi
      
 
 
