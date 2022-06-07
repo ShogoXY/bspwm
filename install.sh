@@ -66,7 +66,7 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
-mkdir -p ~/wallpapers
+
 
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/sxhkd/sxhkdrc 
 wget -O ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/bspwm/bspwmrc
