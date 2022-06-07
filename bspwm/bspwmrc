@@ -14,9 +14,9 @@ fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 bash ~/.config/polybar/launch.sh &
-feh --bg-fill --randomize ~/wallpapers/*
+#feh --bg-fill --randomize ~/wallpapers/*
 #for random change after 1h
-#while true ; do feh --bg-fill --randomize ~/wallpapers/* ; sleep 3600 ; done
+while true ; do feh --bg-fill --randomize ~/wallpapers/* ; sleep 3600 ; done
 
 
 
