@@ -66,12 +66,14 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
+mkdri -p ~/.config/kitty
 
 
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/sxhkd/sxhkdrc 
 wget -O ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/bspwm/bspwmrc
 wget -O ~/.config/polybar/config.ini https://raw.githubusercontent.com/ShogoXY/bspwm/main/polybar/config.ini
 wget -O ~/.config/polybar/launch.sh https://raw.githubusercontent.com/ShogoXY/bspwm/main/polybar/launch.sh
+wget -O ~/.config/kitty/kitty.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/kitty/kitty.conf
 
 chmod +x ~/.config/polybar/launch.sh
 cd
