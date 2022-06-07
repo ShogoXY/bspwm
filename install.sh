@@ -79,6 +79,10 @@ cd
 chmod +x ~/.config/bspwm/bspwmrc
 
 
+git clone https://github.com/ShogoXY/bspwm
+mv -r ~/bspwm/fonts ~/.fonts
+rm -r ~/bspwm
+
 echo "Do you want to Reboot the system [y/N] "
 
 
