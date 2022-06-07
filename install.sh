@@ -74,19 +74,14 @@ wget -O ~/.config/polybar/config.ini https://raw.githubusercontent.com/ShogoXY/b
 wget -O ~/.config/polybar/launch.sh https://raw.githubusercontent.com/ShogoXY/bspwm/main/polybar/launch.sh
 
 chmod +x ~/.config/polybar/launch.sh
-cd ~/wallpapers
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/car.jpg
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/hole.jpg
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/leaf.jpg
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/motyl.jpg
-wget https://raw.githubusercontent.com/ShogoXY/bspwm/main/wallpapers/mountain.png
 cd
 chmod +x ~/.config/bspwm/bspwmrc
 
 
 git clone https://github.com/ShogoXY/bspwm
-mv -r ~/bspwm/fonts ~/.fonts
-rm -r ~/bspwm
+mv ~/bspwm/fonts ~/.fonts
+mv ~/bspwm/wallpapers ~/wallpapers
+rm -rf ~/bspwm
 
 echo "Do you want to Reboot the system [y/N] "
 
