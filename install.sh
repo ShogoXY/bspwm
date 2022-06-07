@@ -28,9 +28,9 @@ if [[ $SYS =~ "Debian" ]]; then
 
     if [[ "$de" != "" ]]
         then
-	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi
+	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi xsetroot
         else
-	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar xsetroot kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
@@ -44,10 +44,10 @@ elif [[ $SYS =~ "Fedora" ]]; then
     
     if [[ "$de" != "" ]]
         then
-	    sudo dnf -y install vim git feh bspwm sxhkd polybar kitty rofi flatpak 
+	    sudo dnf -y install vim git feh bspwm sxhkd polybar xsetroot kitty rofi flatpak 
 	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         else
-	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox mirage flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi thunar firefox mirage flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	    sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
