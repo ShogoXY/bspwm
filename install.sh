@@ -41,12 +41,15 @@ elif [[ $SYS =~ "Fedora" ]]; then
     sudo dnf update -y
     sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     
+    
     if [[ "$de" != "" ]]
         then
-	    sudo dnf -y install vim git feh bspwm sxhkd polybar kitty rofi
+	    sudo dnf -y install vim git feh bspwm sxhkd polybar kitty rofi flatpak 
+	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         else
-	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
-            sudo systemctl set-default graphical.target
+	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox mirage flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+            sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	    sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
     fi
