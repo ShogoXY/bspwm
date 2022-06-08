@@ -112,8 +112,9 @@ then
 	sudo reboot
 	
 else
-
-	echo "to set setting you must reboot te system"
+        echo ""
+	echo "to set setting you must reboot the system"
+        echo ""
 fi
 break
 done
