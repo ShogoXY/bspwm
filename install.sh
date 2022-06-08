@@ -95,9 +95,6 @@ cd
 chmod +x ~/.config/bspwm/bspwmrc
 
 
-mkdir -p ~/.fonts
-mkdir -p ~/wallpapers
-mkdir -p ~/.config/rofi
 git clone https://github.com/ShogoXY/bspwm
 cp -r ~/bspwm/fonts/. ~/.fonts
 cp -r ~/bspwm/wallpapers/. ~/wallpapers
