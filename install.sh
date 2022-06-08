@@ -70,6 +70,18 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
+touch ~/.config/user-dirs.dirs
+
+printf"
+XDG_DESKTOP_DIR="$HOME/Pulpit"
+XDG_DOWNLOAD_DIR="$HOME/Pobrane"
+XDG_TEMPLATES_DIR="$HOME/Szablony"
+XDG_PUBLICSHARE_DIR="$HOME/Publiczny"
+XDG_DOCUMENTS_DIR="$HOME/Dokumenty"
+XDG_MUSIC_DIR="$HOME/Muzyka"
+XDG_PICTURES_DIR="$HOME/Obrazy"
+XDG_VIDEOS_DIR="$HOME/Wideo"
+"
 
 
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/sxhkd/sxhkdrc 
