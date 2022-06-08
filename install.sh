@@ -102,7 +102,7 @@ git clone https://github.com/ShogoXY/bspwm
 cp -r ~/bspwm/fonts ~/.fonts
 cp -r ~/bspwm/wallpapers ~/wallpapers
 cp -r ~/bspwm/rofi ~/.config/rofi
-chmod +x ~/.config/rofi/poweermenu/powermenu.sh
+chmod +x ~/.config/rofi/powermenu/powermenu.sh
 rm -rf ~/bspwm
 
 echo "Do you want to Reboot the system [y/N] "
