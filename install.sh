@@ -66,7 +66,6 @@ elif [[ $SYS =~ "Fedora" ]]; then
 #sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
 
 mkdir -p ~/.config/polybar
-mkdir -p ~/.config/rofi
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
@@ -96,9 +95,12 @@ cd
 chmod +x ~/.config/bspwm/bspwmrc
 
 
+
 git clone https://github.com/ShogoXY/bspwm
 mv ~/bspwm/fonts ~/.fonts
 mv ~/bspwm/wallpapers ~/wallpapers
+mv ~/bspwm/rofi ~/.config/rofi
+chmod +x ~/.config/rofi/poweermenu/powermenu.sh
 rm -rf ~/bspwm
 
 echo "Do you want to Reboot the system [y/N] "
