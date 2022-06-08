@@ -32,6 +32,7 @@ if [[ $SYS =~ "Debian" ]]; then
     if [[ "$de" != "" ]]
         then
 	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi x11-xserver-utils
+            
         else
 	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar x11-xserver-utils kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
@@ -49,6 +50,7 @@ elif [[ $SYS =~ "Fedora" ]]; then
         then
 	    sudo dnf -y install vim git feh bspwm sxhkd polybar xsetroot kitty rofi flatpak 
 	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+            wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
         else
 	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi thunar firefox mirage flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -71,7 +73,7 @@ mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
 touch ~/.config/user-dirs.dirs
 
-printf"
+printf "
 XDG_DESKTOP_DIR="$HOME/Pulpit"
 XDG_DOWNLOAD_DIR="$HOME/Pobrane"
 XDG_TEMPLATES_DIR="$HOME/Szablony"
@@ -80,7 +82,7 @@ XDG_DOCUMENTS_DIR="$HOME/Dokumenty"
 XDG_MUSIC_DIR="$HOME/Muzyka"
 XDG_PICTURES_DIR="$HOME/Obrazy"
 XDG_VIDEOS_DIR="$HOME/Wideo"
-"
+" > ~/.config/user-dirs.dirs
 
 
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ShogoXY/bspwm/main/sxhkd/sxhkdrc 
@@ -101,6 +103,7 @@ cp -r ~/bspwm/wallpapers/. ~/wallpapers
 cp -r ~/bspwm/rofi/. ~/.config/rofi
 chmod +x ~/.config/rofi/powermenu/powermenu.sh
 rm -rf ~/bspwm
+xdg-user-dirs-update
 
 echo "Do you want to Reboot the system [y/N] "
 

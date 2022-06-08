@@ -7,7 +7,7 @@ if [[ "$de" != "" ]]
   then
     echo "$de"
   else
-    picom --config ~/.config/picom.conf
+    picom --config ~/.config/picom.conf &
 fi
 
 
