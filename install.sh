@@ -31,9 +31,9 @@ if [[ $SYS =~ "Debian" ]]; then
 
     if [[ "$de" != "" ]]
         then
-	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi xsetroot
+	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi x11-xserver-utils
         else
-	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar xsetroot kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo apt-get -y install vim git feh bspwm sddm picom sxhkd polybar x11-xserver-utils kitty rofi thunar firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
@@ -95,11 +95,13 @@ cd
 chmod +x ~/.config/bspwm/bspwmrc
 
 
-
+mkdir -p ~/.fonts
+mkdir -p ~/wallpapers
+mkdir -p ~/.config/rofi
 git clone https://github.com/ShogoXY/bspwm
-mv ~/bspwm/fonts ~/.fonts
-mv ~/bspwm/wallpapers ~/wallpapers
-mv ~/bspwm/rofi ~/.config/rofi
+cp -r ~/bspwm/fonts ~/.fonts
+cp -r ~/bspwm/wallpapers ~/wallpapers
+cp -r ~/bspwm/rofi ~/.config/rofi
 chmod +x ~/.config/rofi/poweermenu/powermenu.sh
 rm -rf ~/bspwm
 
