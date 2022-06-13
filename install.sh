@@ -32,12 +32,25 @@ if [[ $SYS =~ "Debian" ]]; then
     if [[ "$de" != "" ]]
         then
 	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty rofi x11-xserver-utils curl unzip tar gzip gcc g++ pip
+            wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            sudo dpkg -i nvim-linux64.deb
+
+            rm nvim-linux64.deb
+            git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+            echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
             
         else
 	    sudo apt-get -y install vim git feh bspwm sddm picom pip sxhkd polybar x11-xserver-utils kitty rofi thunar curl unzip tar gzip gcc g++ firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
+
+            wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            sudo dpkg -i nvim-linux64.deb
+            git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+            rm nvim-linux64.deb
+
+            echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
     fi
     
 
@@ -48,15 +61,19 @@ elif [[ $SYS =~ "Fedora" ]]; then
     
     if [[ "$de" != "" ]]
         then
-	    sudo dnf -y install vim git feh bspwm sxhkd polybar xsetroot kitty rofi flatpak curl unzip tar gzip gcc g++ pip
+	    sudo dnf -y install vim git feh bspwm sxhkd polybar xsetroot kitty rofi flatpak curl unzip tar gzip gcc g++ pip neovim python3-neovim
 	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
+            git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+            echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
         else
-	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi thunar firefox pip mirage curl unzip tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi thunar firefox pip mirage curl unzip tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	    sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
+            git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+            echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
     fi
  fi
      
