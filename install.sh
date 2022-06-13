@@ -100,10 +100,16 @@ chmod +x ~/.config/bspwm/bspwmrc
 git clone https://github.com/ShogoXY/bspwm
 cp -r ~/bspwm/fonts/. ~/.fonts
 cp -r ~/bspwm/wallpapers/. ~/wallpapers
-cp -r ~/bspwm/rofi/. ~/.config/rofi
-chmod +x ~/.config/rofi/powermenu/powermenu.sh
+git clone https://github.com/jluttine/rofi-power-menu
+
+cp -r rofi-power-menu ~/.config/rofi/
 rm -rf ~/bspwm
+rm -rf ~/rofi-power-menu
 xdg-user-dirs-update
+
+
+
+
 
 echo "Do you want to Reboot the system [y/N] "
 

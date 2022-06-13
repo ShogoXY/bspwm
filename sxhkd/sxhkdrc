@@ -20,8 +20,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+super + alt + r
+	bspc wm -r
+
+super + alt + q
+	rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu/rofi-power-menu
 
 # close and kill
 super + {_,shift + }w
