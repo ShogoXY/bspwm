@@ -3,13 +3,13 @@
 
 de=$(echo $DESKTOP_SESSION)
 
-if [[ "$de" = "bspwm" ]]
+if [[ "$de" != "" ]]
   then
-    picom --config ~/.config/picom.conf &
+    echo "$de"
     
   else
-    # picom --config ~/.config/picom.conf &
-    echo "$de"
+    picom --config ~/.config/picom.conf &
+    
 fi
 
 
