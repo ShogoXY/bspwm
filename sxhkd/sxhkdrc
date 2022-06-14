@@ -10,6 +10,8 @@ super + Return
 #super + @space
 super + d
 	rofi -show drun -show-icons
+super + shift +d
+	rofi -show run -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -27,7 +29,7 @@ super + alt + q
 	rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 super + shift + q
 	bspc quit
-	
+
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
