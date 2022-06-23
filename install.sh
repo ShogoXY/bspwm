@@ -4,7 +4,7 @@ echo ""
 echo "+++++++++++++++++++++++++++++++++++++++++"
 echo "+                                       +"
 echo "+     Instalation and simple config     +"
-echo "+     BSPWM and SDDM window manager     +"
+echo "+    BSPWM and LightDM window manager   +"
 echo "+                                       +"
 echo "+++++++++++++++++++++++++++++++++++++++++"
 echo ""
@@ -69,10 +69,10 @@ elif [[ $SYS =~ "Fedora" ]]; then
             git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
             echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
         else
-	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
+	    sudo dnf -y install vim git feh bspwm lightdm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	    sudo systemctl set-default graphical.target
-            sudo systemctl enable sddm
+            sudo systemctl enable lightdm
             sudo flatpak install spotify -y    
             git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
             echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
