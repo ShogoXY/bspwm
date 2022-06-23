@@ -31,7 +31,7 @@ if [[ $SYS =~ "Debian" ]]; then
 
     if [[ "$de" != "" ]]
         then
-	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty lxpolkit rofi x11-xserver-utils curl unzip tar gzip gcc g++ pip dusnt arandr flatpak
+	    sudo apt-get -y install vim git feh bspwm sxhkd polybar kitty lxpolkit rofi x11-xserver-utils curl unzip tar gzip gcc g++ pip dunst arandr flatpak
             wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
             sudo dpkg -i nvim-linux64.deb
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -69,7 +69,7 @@ elif [[ $SYS =~ "Fedora" ]]; then
             git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
             echo "vim.cmd([[set confirm]])" >> ~/.config/nvim/init.lua
         else
-	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dusnt arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
+	    sudo dnf -y install vim git feh bspwm sddm picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	    sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
@@ -90,10 +90,10 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
-mkdir -p ~/.config/rofi/
-mkdir -p ~/.config/Thunar
-mkdir -p ~/.fonts
-mkdir -p ~/wallpapers
+#mkdir -p ~/.config/rofi/
+#mkdir -p ~/.config/Thunar
+#mkdir -p ~/.fonts
+#mkdir -p ~/wallpapers
 touch ~/.config/user-dirs.dirs
 
 printf "
@@ -134,12 +134,12 @@ rm -rf ~/bspwm
 rm -rf ~/rofi-power-menu
 xdg-user-dirs-update
 
-sudo touch /usr/local/bin/spotify
 
-sudo echo "#!/bin/bash" >> /usr/local/bin/spotify
-sudo echo "flatpak run com.spotify.Client" >> /usr/local/bin/spotify
-sudo chmod +x /usr/local/bin/spotify
 
+sudo echo "#!/bin/bash" >> spotify
+sudo echo "flatpak run com.spotify.Client" >> spotify
+sudo chmod +x spotify
+sudo cp spotify /usr/local/bin/spotify
 
 
 
