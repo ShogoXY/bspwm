@@ -134,6 +134,8 @@ rm -rf ~/bspwm
 rm -rf ~/rofi-power-menu
 xdg-user-dirs-update
 
+sudo touch /usr/local/bin/spotify
+
 sudo echo "#!/bin/bash" >> /usr/local/bin/spotify
 sudo echo "flatpak run com.spotify.Client" >> /usr/local/bin/spotify
 sudo chmod +x /usr/local/bin/spotify
