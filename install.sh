@@ -90,6 +90,10 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
+mkdir -p ~/.config/rofi/
+mkdir -p ~/.config/Thunar
+mkdir -p ~/.fonts
+mkdir -p ~/wallpapers
 touch ~/.config/user-dirs.dirs
 
 printf "
@@ -124,8 +128,8 @@ cp -r ~/bspwm/Thunar/. ~/.config/Thunar
 cp -r ~/bspwm/wallpapers/. ~/wallpapers
 git clone https://github.com/jluttine/rofi-power-menu
 
-cp -r rofi-power-menu ~/.config/rofi/
-cp -r bspwm/rofi/. ~/.config/rofi/
+cp -r ~/rofi-power-menu/. ~/.config/rofi/
+cp -r ~/bspwm/rofi/. ~/.config/rofi/
 rm -rf ~/bspwm
 rm -rf ~/rofi-power-menu
 xdg-user-dirs-update
