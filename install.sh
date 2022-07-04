@@ -143,20 +143,20 @@ sudo cp spotify /usr/local/bin/spotify
 
 
 
-echo "Do you want to Reboot the system [y/N] "
+#echo "Do you want to Reboot the system [y/N] "
 
 
-while read -r -p " " odp
-do
-if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
-then
-	sudo reboot
+#while read -r -p " " odp
+#do
+#if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
+#then
+	#sudo reboot
 	
-else
-        echo ""
-	echo "to set setting you must reboot the system"
-        echo ""
-fi
-break
-done
+#else
+ #       echo ""
+#	echo "to set setting you must reboot the system"
+ #       echo ""
+#fi
+#break
+#done
 
