@@ -38,8 +38,9 @@ if [[ $SYS =~ "Debian" ]]; then
             sudo flatpak install spotify -y    
             rm nvim-linux64.deb
             bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    echo "lvim.transparent_window = true">> ~/.config/lvim/config.lua
-	    echo "lvim.builtin.lualine.sections.lualine_a={'mode'}">> ~/.config/lvim/config.lua
+	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
+	    
+	    
             
         else
 	    sudo apt-get -y install make pip npm cargo vim git feh bspwm sddm picom pip sxhkd polybar flatpak lxpolkit x11-xserver-utils kitty rofi thunar dunst arandr curl unzip tar gzip gcc g++ firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
@@ -53,8 +54,8 @@ if [[ $SYS =~ "Debian" ]]; then
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
             sudo flatpak install spotify -y    
             bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    echo "lvim.transparent_window = true">> ~/.config/lvim/config.lua
-	    echo "lvim.builtin.lualine.sections.lualine_a={'mode'}">> ~/.config/lvim/config.lua
+	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
+	    
     fi
     
 
@@ -69,8 +70,7 @@ elif [[ $SYS =~ "Fedora" ]]; then
 	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
             sudo flatpak install spotify -y  
 	    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    echo "lvim.transparent_window = true">> ~/.config/lvim/config.lua
-	    echo "lvim.builtin.lualine.sections.lualine_a={'mode'}">> ~/.config/lvim/config.lua
+	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
             
         else
 	    sudo dnf -y install make pip npm cargo vim git feh bspwm lightdm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
@@ -79,8 +79,7 @@ elif [[ $SYS =~ "Fedora" ]]; then
             sudo systemctl enable lightdm
             sudo flatpak install spotify -y   
 	    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    echo "lvim.transparent_window = true">> ~/.config/lvim/config.lua
-	    echo "lvim.builtin.lualine.sections.lualine_a={'mode'}">> ~/.config/lvim/config.lua
+	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua 
     fi
  fi
      
@@ -128,6 +127,7 @@ chmod +x ~/.config/bspwm/bspwmrc
 
 
 git clone https://github.com/ShogoXY/bspwm
+
 cp -r ~/bspwm/fonts/. ~/.fonts
 cp -r ~/bspwm/Thunar/. ~/.config/Thunar
 cp -r ~/bspwm/wallpapers/. ~/wallpapers
@@ -141,27 +141,27 @@ xdg-user-dirs-update
 
 
 
-sudo echo "#!/bin/bash" >> spotify
-sudo echo "flatpak run com.spotify.Client" >> spotify
-sudo chmod +x spotify
-sudo cp spotify /usr/local/bin/spotify
+#sudo echo "#!/bin/bash" >> spotify
+#sudo echo "flatpak run com.spotify.Client" >> spotify
+#sudo chmod +x spotify
+#sudo cp spotify /usr/local/bin/spotify
 
 
 
-#echo "Do you want to Reboot the system [y/N] "
+echo "Do you want to Reboot the system [y/N] "
 
 
-#while read -r -p " " odp
-#do
-#if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
-#then
-	#sudo reboot
+while read -r -p " " odp
+do
+if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
+then
+	sudo reboot
 	
-#else
- #       echo ""
-#	echo "to set setting you must reboot the system"
- #       echo ""
-#fi
-#break
-#done
+else
+        echo ""
+	echo "to set setting you must reboot the system"
+        echo ""
+fi
+break
+done
 
