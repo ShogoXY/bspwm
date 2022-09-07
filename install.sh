@@ -32,13 +32,13 @@ if [[ $SYS =~ "Debian" ]]; then
     if [[ "$de" != "" ]]
         then
 	    sudo apt-get -y install  make pip npm cargo vim git feh bspwm sxhkd polybar kitty lxpolkit rofi x11-xserver-utils curl unzip tar gzip gcc g++ pip dunst arandr flatpak
-            wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            #wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
             sudo dpkg -i nvim-linux64.deb
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            sudo flatpak install spotify -y    
+        #     sudo flatpak install spotify -y    
             rm nvim-linux64.deb
-            bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
+            
 	    
 	    
             
@@ -48,13 +48,13 @@ if [[ $SYS =~ "Debian" ]]; then
             sudo systemctl enable sddm
             
 
-            wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            #wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+            wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
             sudo dpkg -i nvim-linux64.deb
             rm nvim-linux64.deb
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            sudo flatpak install spotify -y    
-            bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
+        #     sudo flatpak install spotify -y    
+            
 	    
     fi
     
@@ -68,18 +68,17 @@ elif [[ $SYS =~ "Fedora" ]]; then
         then
 	    sudo dnf -y install make pip npm cargo vim git feh bspwm sxhkd polybar xsetroot kitty rofi lxpolkit flatpak curl unzip tar gzip gcc g++ pip neovim python3-neovim dunst arandr
 	    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            sudo flatpak install spotify -y  
+        #     sudo flatpak install spotify -y  
 	    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
             
         else
-	    sudo dnf -y install make pip npm cargo vim git feh bspwm lightdm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
+	    sudo dnf -y install make pip npm cargo vim git feh bspwm sddm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	    sudo systemctl set-default graphical.target
-            sudo systemctl enable lightdm
-            sudo flatpak install spotify -y   
-	    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua 
+            sudo systemctl enable sddm
+        #     sudo flatpak install spotify -y   
+	    
     fi
  fi
      
@@ -148,18 +147,19 @@ xdg-user-dirs-update
 
 
 
-echo "Do you want to Reboot the system [y/N] "
+echo "Do you want to Install LunarVim [y/N] "
 
 
 while read -r -p " " odp
 do
 if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
 then
-	sudo reboot
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua 
 	
 else
         echo ""
-	echo "to set setting you must reboot the system"
+	echo "BYE!!"
         echo ""
 fi
 break
