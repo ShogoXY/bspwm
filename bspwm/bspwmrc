@@ -3,7 +3,7 @@
 
 de=$(echo $DESKTOP_SESSION)
 
-if [[ "$de" != "" ]]
+if [[ "$de" != "bspwm" ]]
   then
     echo "$de"
     

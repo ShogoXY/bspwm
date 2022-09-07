@@ -118,6 +118,7 @@ wget -O ~/.config/polybar/launch.sh https://raw.githubusercontent.com/ShogoXY/bs
 wget -O ~/.config/kitty/kitty.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/kitty/kitty.conf
 wget -O ~/.config/picom.conf https://raw.githubusercontent.com/ShogoXY/bspwm/main/picom.conf
 wget -O ~/.gtkrc-2.0 https://raw.githubusercontent.com/ShogoXY/bspwm/main/gtkrc-2.0
+wget -O ~/.config/gtk-3.0/settings.ini https://raw.githubusercontent.com/ShogoXY/bspwm/main/settings.ini
 
 
 chmod +x ~/.config/polybar/launch.sh
