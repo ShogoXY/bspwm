@@ -154,7 +154,7 @@ while read -r -p " " odp
 do
 if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
 then
-	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y
 	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua 
 	
 else
