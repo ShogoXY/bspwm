@@ -43,7 +43,8 @@ if [[ $SYS =~ "Debian" ]]; then
 	    
             
         else
-	    sudo apt-get -y install make pip npm cargo vim git feh bspwm sddm picom pip sxhkd polybar flatpak lxpolkit x11-xserver-utils kitty rofi thunar dunst arandr curl unzip tar gzip gcc g++ firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+	        sudo apt-get -y install make pip npm cargo vim git feh bspwm sddm picom pip sxhkd polybar flatpak lxpolkit x11-xserver-utils kitty rofi thunar dunst arandr curl unzip tar gzip gcc g++ firefox-esr mirage lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs
+            sudo apt-get -y install --no-install-recommends qml-module-qtquick-layouts qml-module-qtgraphicaleffects qml-module-qtquick-controls2 libqt5svg5
             sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
             
@@ -73,9 +74,9 @@ elif [[ $SYS =~ "Fedora" ]]; then
 	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua
             
         else
-	    sudo dnf -y install make pip npm cargo vim git feh bspwm sddm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim
+	        sudo dnf -y install make pip npm cargo vim git feh bspwm sddm @base-x picom sxhkd xsetroot polybar kitty rofi lxpolkit thunar firefox pip mirage curl unzip dunst arandr tar gzip gcc g++ flatpak lxappearance breeze-cursor-theme papirus-icon-theme arc-theme xdg-utils xdg-user-dirs neovim python3-neovim qt5-qtgraphicaleffects qt5-qtquickcontrols2 qt5-qtsvg
             sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	    sudo systemctl set-default graphical.target
+	        sudo systemctl set-default graphical.target
             sudo systemctl enable sddm
         #     sudo flatpak install spotify -y   
 	    
@@ -131,6 +132,9 @@ git clone https://github.com/ShogoXY/bspwm
 cp -r ~/bspwm/fonts/. ~/.fonts
 cp -r ~/bspwm/Thunar/. ~/.config/Thunar
 cp -r ~/bspwm/wallpapers/. ~/wallpapers
+sudo cp -r ~/bspwm/sugar-candy/. /usr/share/sddm/themes/sugar-candy
+sudo mv /etc/sddm.conf /etc/sddm.conf.bak
+sudo cp -r ~/bspwm/sddm.conf /etc/
 git clone https://github.com/jluttine/rofi-power-menu
 
 cp -r ~/rofi-power-menu/. ~/.config/rofi/
