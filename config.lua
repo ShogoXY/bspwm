@@ -23,6 +23,7 @@ lvim.builtin.bufferline.options.indicator = { style = "icon", icon = "▎" }
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<Leader>C"] = ":ColorizerToggle<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -178,6 +179,7 @@ lvim.plugins = {
     {"lunarvim/colorschemes"},
     {"morhetz/gruvbox"},
     {"folke/tokyonight.nvim"},
+    {"norcalli/nvim-colorizer.lua"}
     {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
