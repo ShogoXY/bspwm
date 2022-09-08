@@ -94,6 +94,7 @@ mkdir -p ~/.config/polybar
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/kitty
+mkdir -p ~/.config/gtk-3.0
 #mkdir -p ~/.config/rofi/
 #mkdir -p ~/.config/Thunar
 #mkdir -p ~/.fonts
