@@ -179,7 +179,7 @@ lvim.plugins = {
     {"lunarvim/colorschemes"},
     {"morhetz/gruvbox"},
     {"folke/tokyonight.nvim"},
-    {"norcalli/nvim-colorizer.lua"}
+    {"norcalli/nvim-colorizer.lua"},
     {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
