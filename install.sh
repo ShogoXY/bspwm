@@ -152,16 +152,19 @@ xdg-user-dirs-update
 #sudo cp spotify /usr/local/bin/spotify
 
 
-
+echo ""
+echo ""
 echo "Do you want to Install LunarVim [y/N] "
-
+echo ""
 
 while read -r -p " " odp
 do
 if [[ "$odp" =~ ^([yY][eE][sS]|[yY]|[tT])$ ]]
 then
-	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y
-	    wget -O ~/.config/lvim/config.lua https://raw.githubusercontent.com/ShogoXY/bspwm/main/config.lua 
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+	    wget -O ~/.config/lvim/lvim_config.txt https://raw.githubusercontent.com/ShogoXY/bspwm/main/lvim_config.txt 
+        cat ~/.config/lvim/lvim_config.txt >> ~/.config/lvim/config.lua
+        rm ~/.config/lvim/lvim_config.txt
 	
 else
         echo ""
