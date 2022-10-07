@@ -1,0 +1,28 @@
+lvim.transparent_window = true
+lvim.builtin.lualine.sections.lualine_a = { 'mode' }
+vim.cmd [[
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+]]
+
+-- Additional Plugins
+lvim.plugins = {
+    {"lunarvim/colorschemes"},
+    {"morhetz/gruvbox"},
+    {"folke/tokyonight.nvim"},
+    {"tpope/vim-fugitive"},
+    {"norcalli/nvim-colorizer.lua"},
+    {
+      "folke/trouble.nvim",
+      cmd = "TroubleToggle",
+    },
+}
+
+lvim.keys.normal_mode["<Leader>C"] = ":ColorizerToggle<cr>"
+
+lvim.builtin.which_key.mappings["G"] = {
+  name = "+GIT Fugitive",
+  G = { "<cmd>G<cr>", "Main Check" },
+  c = { "<cmd>Git commit<cr>", "Commit" },
+  p = { "<cmd>Git push<cr>", "Push" },
+  d = { "<cmd>Gdiffsplit<cr>", "Diff Split" },
+}
