@@ -165,7 +165,8 @@ then
 	    wget -O ~/.config/lvim/lvim_config.txt https://raw.githubusercontent.com/ShogoXY/bspwm/main/lvim_config.txt 
         cat ~/.config/lvim/lvim_config.txt >> ~/.config/lvim/config.lua
         rm ~/.config/lvim/lvim_config.txt
-        ~/.local/bin/lvim -c 'TSupdate' -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
+        ~/.local/bin/lvim -c 'TSInstallSync bash c javascript json lua python typescript tsx css rust java yaml' -c q 
+        ~/.local/bin/lvim -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
 	
 else
         echo ""
