@@ -5,7 +5,7 @@
     bg-selected: #282c34;
     grey: #565c64;
     spacing: 2;
-    width: 325em;
+    width: 25em;
     margin: 0;
     padding: 0;
 }
