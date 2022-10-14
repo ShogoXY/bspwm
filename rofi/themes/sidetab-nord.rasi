@@ -1,11 +1,11 @@
 * {
-    background: #1e222a;
+    background: #2E3440;
     foreground: #E5E9F0;
     border-color: @background;
     bg-selected: #282c34;
     grey: #565c64;
     spacing: 2;
-    width: 30em;
+    width: 325em;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@
     location: west;
     anchor: west;
     height: 100%;
-    margin: 0;
+    margin: 6;
 }
 
 #mainbox {
