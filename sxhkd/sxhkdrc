@@ -25,9 +25,9 @@ super + Escape
 super + alt + r
 	bspc wm -r
 
-super + alt + q
-	rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 super + shift + q
+	rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
+super + alt+ ctrl+ + q
 	bspc quit
 
 # close and kill
